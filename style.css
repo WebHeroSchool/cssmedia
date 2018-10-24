@@ -53,23 +53,51 @@ label{
     max-height: 0;
     font-size: 0;
     overflow: hidden;
-    transition: .5s all;
+   
 }
 
 a{
     display: block;
     width: 100%;
     padding: 10px;
-    color: blue;
     text-decoration: none;
     border-top: 1px solid rgba(255,255,255,.3);
     background-color: #000;
+	
+}
+
+@keyframes animation-name {   
+  0% {     
+    color: green;   
+  }   
+  50% {     
+    color: yellow;   
+  } 
+  100% {
+    color: blue;
+   }
+}
+
+@-webkit-keyframes animation-name {   
+  0% {     
+    color: green;   
+  }   
+  50% {     
+    color: yellow;   
+  } 
+  100% {
+    color: blue;
+  }
 }
 
 
 a:hover{
-    background-color: rgba(0,0,0,.9);
+    background-color: green;
+	-webkit-animation: animation-name 1s;
 }
+
+
+
 
 #check-menu:checked ~ .main-menu{
     max-height: 500px;
